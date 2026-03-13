@@ -1,0 +1,30 @@
+{
+  "name": "classsection",
+  "version": "1.0.0",
+  "description": "CLI tool to scan Shopify theme folders and inject custom_class schema settings into section files",
+  "main": "bin/cli.js",
+  "bin": {
+    "classsection": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "test": "node --test test/**/*.test.js"
+  },
+  "keywords": [
+    "shopify",
+    "theme",
+    "liquid",
+    "sections",
+    "cli",
+    "custom-class"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "fs-extra": "^11.2.0",
+    "glob": "^10.3.10",
+    "prettier": "^3.2.5"
+  }
+}
