@@ -1,0 +1,34 @@
+<!--
+  Example: Plain HTML using classsection at build time or via a bundler.
+
+  Before:
+    <section class="hero-section">
+
+  After (with classsection injected):
+    <section class="hero-section custom-class">
+
+  In a build pipeline, use the CLI:
+    npx classsection transform ./src --type html --class-expr "custom-class"
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>classsection HTML Example</title>
+</head>
+<body>
+  <section class="hero-section custom-class">
+    <div class="hero-section__container">
+      <h1 class="hero-section__title">Welcome</h1>
+      <p class="hero-section__subtitle">Discover our latest collection</p>
+    </div>
+  </section>
+
+  <section class="featured-section custom-class">
+    <div class="featured-section__container">
+      <h2>Featured Products</h2>
+    </div>
+  </section>
+</body>
+</html>

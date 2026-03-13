@@ -1,15 +1,24 @@
 {
   "name": "classsection",
-  "version": "1.1.0",
-  "description": "CLI tool to scan Shopify theme folders and inject custom_class schema settings into section files",
-  "main": "bin/cli.js",
+  "version": "2.0.0",
+  "description": "Lightweight utility and CLI for adding custom CSS classes to UI sections. Zero-dependency core. AI-agent friendly.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./src/index.js",
+      "import": "./src/index.mjs",
+      "types": "./src/index.d.ts"
+    }
+  },
   "bin": {
     "classsection": "bin/cli.js"
   },
+  "sideEffects": false,
   "scripts": {
     "start": "node bin/cli.js",
     "postinstall": "node scripts/postinstall.js",
-    "test": "node --test test/**/*.test.js"
+    "test": "node test/library.test.js && node test/core.test.js && node test/transformer.test.js && node test/size.test.js"
   },
   "keywords": [
     "shopify",
@@ -17,7 +26,15 @@
     "liquid",
     "sections",
     "cli",
-    "custom-class"
+    "custom-class",
+    "class-names",
+    "css",
+    "bem",
+    "ai-agent",
+    "bulk-transform",
+    "react",
+    "vue",
+    "jsx"
   ],
   "author": "Atul8007",
   "repository": {
@@ -29,11 +46,15 @@
     "url": "https://github.com/Atul8007/classsection/issues"
   },
   "files": [
+    "src/",
     "bin/",
     "core/",
     "features/",
+    "transformers/",
     "utils/",
     "scripts/",
+    "examples/",
+    "index.js",
     "README.md",
     "LICENSE"
   ],

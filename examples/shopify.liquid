@@ -1,0 +1,38 @@
+{%- comment -%}
+  Example: Shopify section with custom_class support using classsection.
+  The custom_class schema setting lets merchants add CSS classes per-section.
+{%- endcomment -%}
+
+<section class="hero-section {{ section.settings.custom_class }}" data-section-id="{{ section.id }}">
+  <div class="hero-section__container page-width">
+    <h1 class="hero-section__title">{{ section.settings.title }}</h1>
+    <p class="hero-section__subtitle">{{ section.settings.subtitle }}</p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Welcome"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Discover our latest collection"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom CSS class",
+      "default": "",
+      "info": "Add a custom CSS class to this section wrapper."
+    }
+  ]
+}
+{% endschema %}
