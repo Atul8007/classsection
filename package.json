@@ -1,6 +1,6 @@
 {
   "name": "classsection",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "CLI tool to scan Shopify theme folders and inject custom_class schema settings into section files",
   "main": "bin/cli.js",
   "bin": {
@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "node bin/cli.js",
+    "postinstall": "node scripts/postinstall.js",
     "test": "node --test test/**/*.test.js"
   },
   "keywords": [
@@ -18,7 +19,24 @@
     "cli",
     "custom-class"
   ],
-  "author": "",
+  "author": "Atul8007",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Atul8007/classsection.git"
+  },
+  "homepage": "https://github.com/Atul8007/classsection#readme",
+  "bugs": {
+    "url": "https://github.com/Atul8007/classsection/issues"
+  },
+  "files": [
+    "bin/",
+    "core/",
+    "features/",
+    "utils/",
+    "scripts/",
+    "README.md",
+    "LICENSE"
+  ],
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.2",

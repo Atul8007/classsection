@@ -4,6 +4,9 @@ const { program } = require('commander');
 const chalk = require('chalk');
 const { addCustomClass } = require('../features/add-custom-class');
 const { scanSections } = require('../features/scan-sections');
+const { showBanner } = require('../utils/banner');
+
+showBanner();
 
 program
   .name('classsection')
